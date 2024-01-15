@@ -9,14 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/auth")
 public class UserController {
 
     @Autowired
     private UserService ser;
 
-    @PostMapping("register")
+    @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody User u) throws UserAlreadyExist {
         try{
             return new ResponseEntity<>(ser.addUser(u), HttpStatus.CREATED);
