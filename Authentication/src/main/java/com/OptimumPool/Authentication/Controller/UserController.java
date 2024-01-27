@@ -31,9 +31,9 @@ public class UserController {
 
     }
 
-    @GetMapping("login")
+    @GetMapping("/login")
     public ResponseEntity<?> Login(@RequestParam  String username , @RequestParam  String password){
-//        System.out.println("data comming in controller" + username + password);
+        System.out.println("data comming in controller" + username + password);
         return new ResponseEntity<>(ser.login(username,password),HttpStatus.CREATED);
     }
 

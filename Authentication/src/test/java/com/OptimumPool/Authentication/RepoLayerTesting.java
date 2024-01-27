@@ -25,7 +25,7 @@ public class RepoLayerTesting {
 
     @BeforeEach
     void setup(){
-        user = new User("username", "pass@1234", 1234567890);
+        user = new User("username", "pass@1234", "1234567890");
     }
     @AfterEach
     void tearDown(){

@@ -17,8 +17,7 @@
     <module>Api-gateway</module>
     <module>Authentication</module>
     <module>ServerRegister</module>
-    <module>CommentBlog</module>
-    <module>Dashboard</module>
+    <module>dashboard</module>
   </modules>
 
   <name>BlogingApplication</name>

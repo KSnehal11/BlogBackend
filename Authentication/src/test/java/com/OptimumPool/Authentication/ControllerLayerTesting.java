@@ -34,7 +34,7 @@ public class ControllerLayerTesting {
     @BeforeEach
     void setup()
     {
-        user=new User("username", "pass@1234", 1234567890);
+        user=new User("username", "pass@1234", "1234567890");
         mockmvc= MockMvcBuilders.standaloneSetup(con).build();
     }
     @AfterEach

@@ -35,7 +35,7 @@ public class UserService implements IService{
     public Map<String, String> login(String username , String password) {
         Map<String, String> token = new HashMap<String, String>();
         un = username;
-//        System.out.println("data comming in server" + un);
+        System.out.println("data comming in server" + un);
         User u1 = repo.findByUsernameAndPassword(username, password);
         if(u1!=null){
             token = getToken(u1);

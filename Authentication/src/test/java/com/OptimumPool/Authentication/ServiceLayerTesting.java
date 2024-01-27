@@ -30,7 +30,7 @@ public class ServiceLayerTesting {
     User user;
     @BeforeEach
     public void SetUp(){
-        user = new User("username", "pass@123", 1234567890);
+        user = new User("username", "pass@123", "1234567890");
     }
 
     @AfterEach
