@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 @Service
 public interface dashboardServiceInterface {
-    public dashboardModel addBlog(dashboardModel model);
+    public dashboardModel addBlog(int id , dashboardModel model);
     public List<dashboardModel> showBlogs();
     String uploadImage(String path , MultipartFile file) throws IOException;
 

@@ -23,7 +23,8 @@ public class dashboardService implements dashboardServiceInterface {
     @Autowired
     commentRepo cRepo;
     @Override
-    public dashboardModel addBlog(dashboardModel model) {
+    public dashboardModel addBlog(int id , dashboardModel model) {
+        model.setId(id);
         return repo.save(model);
     }
 

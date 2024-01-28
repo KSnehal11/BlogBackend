@@ -21,10 +21,10 @@ public class dashboardController
     dashboardService service;
     @Value("${project.image}")
     private String path;
-    @PostMapping("/addBlogs")
-    public ResponseEntity<?> addB(@RequestBody  dashboardModel model)
+    @PostMapping("/addBlogs/{id}")
+    public ResponseEntity<?> addB(@PathVariable int id ,  @RequestBody  dashboardModel model)
     {
-        return new ResponseEntity<>(service.addBlog(model), HttpStatus.CREATED);
+        return new ResponseEntity<>(service.addBlog(id,model), HttpStatus.CREATED);
     }
     @CrossOrigin(allowedHeaders ="*",origins="http://localhost:4200")
     @GetMapping("/showBlogs")
