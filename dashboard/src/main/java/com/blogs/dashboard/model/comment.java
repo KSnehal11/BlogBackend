@@ -3,7 +3,7 @@ package com.blogs.dashboard.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "comment")
 public class comment {
     private String commentUsername;
     private String comment;

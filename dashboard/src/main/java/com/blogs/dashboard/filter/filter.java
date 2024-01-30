@@ -22,7 +22,7 @@ public class filter extends GenericFilter {
         else
         {
             String jwttoken= token.substring(7);
-            String pass= Jwts.parser().setSigningKey("itckey").parseClaimsJws(jwttoken).getBody().getSubject();
+            String pass= Jwts.parser().setSigningKey("itcKey").parseClaimsJws(jwttoken).getBody().getSubject();
             chain.doFilter(httpRequest, httpResponse);
         }
     }

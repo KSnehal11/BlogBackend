@@ -16,10 +16,10 @@ public class DashboardApplication {
 
 		FilterRegistrationBean filterReg= new FilterRegistrationBean();
 		filterReg.setFilter(new filter());
-		filterReg.addUrlPatterns("/dashboard/addBlogs/{id}");
-		filterReg.addUrlPatterns("/dashboard/showBlogs");
-		filterReg.addUrlPatterns("/dashboard/addComment/{vId}");
-		filterReg.addUrlPatterns("/dashboard/getComments/{vId}");
+//		filterReg.addUrlPatterns("/dashboard/addBlogs/{id}");
+//		filterReg.addUrlPatterns("/dashboard/showBlogs");
+//		filterReg.addUrlPatterns("/dashboard/addComment/{vId}");
+//		filterReg.addUrlPatterns("/dashboard/getComments/{vId}");
 		return filterReg;
 	}
 }

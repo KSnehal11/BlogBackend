@@ -44,14 +44,14 @@ public class dashboardController
         }
         return new ResponseEntity<>(new tempResponse(fileName,"Image is successfully uploaded"),HttpStatus.OK);
     }
-    @PostMapping("/addComment/{vId}")
-    public ResponseEntity<?> addC(@RequestBody comment com,@PathVariable int vId)
+    @PostMapping("/addComment")
+    public ResponseEntity<?> addC(@RequestBody comment com)
     {
-        return new ResponseEntity<>(service.addComm(com,vId),HttpStatus.OK);
+        return new ResponseEntity<>(service.addComm(com),HttpStatus.OK);
     }
-    @GetMapping("getComments/{vId}")
-    public ResponseEntity<?> showC(@PathVariable int vId)
+    @GetMapping("getComments")
+    public ResponseEntity<?> showC()
     {
-        return new ResponseEntity<>(service.showCom(vId),HttpStatus.OK);
+        return new ResponseEntity<>(service.showCom(),HttpStatus.OK);
     }
 }

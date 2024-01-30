@@ -8,7 +8,7 @@ spring:
           uri: lb://snehal-authentication
           predicates:
             - Path=/auth/**
-        - id: harsh-dashboard
+        - id: snehal-dashboard
           uri: lb://snehal-dashboard
           predicates:
             - Path=/dashboard/**

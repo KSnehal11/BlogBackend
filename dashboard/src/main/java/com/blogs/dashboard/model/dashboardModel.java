@@ -1,26 +1,28 @@
 package com.blogs.dashboard.model;
-import jakarta.persistence.Entity;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 
 import java.util.List;
 
-@Entity
+@Document(collection = "blogs")
 public class dashboardModel {
    @Id
    private int id;
-   private String author;
-   private String description;
+   private String img;
    private String title;
-   private String image;
+   private String author;
+   private String desp;
 
 
-   public dashboardModel(int id, String author, String description, String title , String image) {
+
+
+   public dashboardModel(int id, String img , String title , String author, String desp ) {
       this.id = id;
       this.author = author;
-      this.description = description;
+      this.desp = desp;
       this.title = title;
-      this.image=image;
+      this.img=img;
    }
 
    public int getId() {
@@ -40,11 +42,11 @@ public class dashboardModel {
    }
 
    public String getDescription() {
-      return description;
+      return desp;
    }
 
    public void setDescription(String description) {
-      this.description = description;
+      this.desp = description;
    }
 
    public String getTitle() {
@@ -56,11 +58,11 @@ public class dashboardModel {
    }
 
    public String getImage() {
-      return image;
+      return img;
    }
 
    public void setImage(String image) {
-      this.image=image;
+      this.img=image;
    }
 
 
